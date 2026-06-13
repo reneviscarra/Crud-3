@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Usuarios</title>
+
+  <link rel="stylesheet" href="Style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>CRUD Usuarios - HTML + CSS + JS</h1>
+
+    <div class="crud-container">
+      <div class="form-box">
+        <h3 id="formTitle">Agregar Usuario</h3>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="email" id="email" placeholder="Email">
+        <button class="btn btn-add" onclick="guardar()">Guardar</button>
+      </div>
+
+      <div class="table-box">
+        <div class="acciones-top">
+          <a href="#" onclick="toggleGrafica()" class="btn-grafica"> Gráfica</a>
+          <a href="#" onclick="toggleReporte()" class="btn-grafica"> Reporte</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaUsuarios"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sección de Gráfica -->
+    <div id="graficaSection" class="section-panel">
+      <div class="panel-header">
+        <h3>Gráfica de Usuarios</h3>
+        <a href="#" onclick="toggleGrafica()" class="btn-grafica btn-volver">⬅ Volver</a>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Sección de Reporte -->
+    <div id="reporteSection" class="section-panel">
+      <div class="panel-header">
+        <h3>Reporte de Usuarios</h3>
+        <a href="#" onclick="toggleReporte()" class="btn-grafica btn-volver">⬅ Volver</a>
+      </div>
+
+      <div id="resumenReporte" class="resumen-grid"></div>
+
+      <table id="tablaReporte">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

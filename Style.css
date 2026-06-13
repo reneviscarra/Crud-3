@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0f1e, #1a0a2e);
+  padding: 40px;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+.form-box,
+.table-box,
+.section-panel {
+  background: rgba(20, 20, 40, 0.4);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+}
+
+input:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-add {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  color: #000;
+  width: 100%;
+}
+
+.btn-add:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.btn-edit {
+  background: #ffa500;
+  color: #000;
+}
+
+.btn-delete {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  color: #00ffff;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ---------- Botones Gráfica / Reporte ---------- */
+
+.acciones-top {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.btn-grafica {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #00ffff;
+  transition: 0.3s;
+}
+
+.btn-grafica:hover {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-volver {
+  border-color: rgba(255, 0, 255, 0.3);
+  color: #ff66ff;
+}
+
+/* ---------- Paneles de Gráfica y Reporte ---------- */
+
+.section-panel {
+  display: none;
+}
+
+.section-panel.show {
+  display: block;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.panel-header h3 {
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 350px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* ---------- Tarjetas de Resumen del Reporte ---------- */
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.resumen-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.resumen-card .valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.resumen-card .etiqueta {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
